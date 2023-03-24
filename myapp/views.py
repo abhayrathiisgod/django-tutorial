@@ -14,6 +14,10 @@ def index(request):
         'age':23,
         'nationality':'Nepalese'
     }
-    return render(request,'index.html',context)   # like dictionary ->>{key:value}
- 
+    return render(request,'index.html')   # like dictionary ->>{key:value}
+
+def counter(request):
+    text = request.POST['text']  # text????? ---> from the html form pa
+    ans = len((text.split()))
+    return render(request,'index.html',{'ans':ans})
 

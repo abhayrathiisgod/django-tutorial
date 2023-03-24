@@ -1,3 +1,5 @@
+{% load static %}
+<!--
 <h1>
     Hi {{name}}, how are you doing today?
     <br>
@@ -6,6 +8,20 @@
     You're {{nationality}}!
 </h1>
 
-<!--
+
     typicall html nothing new
 -->
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<h1>Input your text below:</h1>
+
+<form method="POST" action="counter">
+    {% csrf_token %}
+    <textarea name="text" rows="15" cols="50">
+
+    </textarea>
+    <br>
+    <input type="submit">
+</form>
+
+<h1> total word {{ans}}</h1>
