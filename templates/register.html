@@ -1,0 +1,19 @@
+<h1> Register your new account here:</h1>
+
+<form method="POST" action="register">
+    {% csrf_token %}
+    <p>Username:</p>
+    <input type="text" name="username" />
+    <br>
+    <p>Email:</p>
+    <input type="email" name="email">
+    <br>
+    <p>Password:</p>
+    <input type="password" name="password">
+    <br>
+    <p>Repeat password:</p>
+    <input type="password" name="password2">
+    <br>
+    <br>
+    <input type="submit">
+</form>
