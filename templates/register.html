@@ -1,4 +1,12 @@
 <h1> Register your new account here:</h1>
+<style>
+    h5 {
+        color: red;
+    }
+</style>
+{% for message in messages %}
+<h5>{{message}}</h5>
+{% endfor %}
 
 <form method="POST" action="register">
     {% csrf_token %}

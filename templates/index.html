@@ -1,5 +1,15 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'style.css'%}">
+
+
+
+
+
+
+
+
+
+
 <h1>Input your text below:</h1>
 
 <form method="POST" action="counter">
@@ -12,6 +22,10 @@
 </form>
 
 <h1> total words :{{ans}}</h1>
+
+
+
+
 
 {% for feature in features %}
 {% if feature.name == 'batman'%}
