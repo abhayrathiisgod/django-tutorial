@@ -1,7 +1,7 @@
-{% load static %}
+<!--{% load static %}
 <link rel="stylesheet" href="{% static 'style.css' %}">
-<h1>Inut your text below:</h1>
-<!--
+<h1>Input your text below:</h1>
+
 <form method="POST" action="counter">
   {% csrf_token %}
   <textarea name="text" rows="25" cols="60">
@@ -12,4 +12,10 @@
 </form>
 
 <h1> total words :{{ans}}</h1>
+
 -->
+
+
+{% for post in posts %}
+  <h1><a href="{% url 'post' post %}">POST</a></h1>
+  {% endfor %}

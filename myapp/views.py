@@ -63,7 +63,10 @@ def login(request):
         return render(request,'login.html')
 
 def counter(request):
-    text = request.POST['text']  # text????? ---> from the html form pa
-    ans = len((text.split()))
-    return render(request,'index.html',{'ans':ans})
+    #text = request.POST['text']  # text????? ---> from the html form pa
+    #ans = len((text.split()))
+    posts = [1,2,3,4,5,'tim','tom','john']
+    return render(request,'counter.html',{'posts':posts})
 
+def post(request,pk):
+    return render(request,'post.html',{'pk':pk})
